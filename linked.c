@@ -88,10 +88,10 @@ void insertAt(struct Node** list, int val, int pos){
     if(pos<0 || pos>=length){
         printf("invalid input for 'pos' variable");
     }
-    if(pos==0){
+    else if(pos==0){
         push(list,val);
     }
-    if(pos==length-1){
+    else if(pos==length-1){
         append(*list,val);
     }
     else{
@@ -114,7 +114,7 @@ int main(){
 
     struct Node* linkedList = arrayToList(myArray,sizeof(myArray) / sizeof(int));
 
-    insertAt(&linkedList,2,3);
+    insertAt(&linkedList,2,0);
     printList(linkedList);
 
     return 0;
